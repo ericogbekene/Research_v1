@@ -1,8 +1,13 @@
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
-from .models import Department, Project, Writer, HireWriter
-from .serializers import DepartmentSerializer, ProjectSerializer, WriterSerializer, HireWriterSerializer
+from .models import Department, Project, Writer, HireWriter, JobStatus
+from .serializers import (DepartmentSerializer, 
+                          ProjectSerializer, 
+                          WriterSerializer, 
+                          HireWriterSerializer, 
+                          JobStatusSerializer
+                          )
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
@@ -20,6 +25,10 @@ class ProjectViewSet(viewsets.ModelViewSet):
 class WriterViewSet(viewsets.ModelViewSet):
     queryset = Writer.objects.all()
     serializer_class = WriterSerializer
+
+class JobStatusViewSet(viewsets.ModelViewSet):
+    queryset = JobStatus.objects.all()
+    serializer_class = JobStatusSerializer
 
 class HireWriterViewSet(viewsets.ModelViewSet):
     queryset = HireWriter.objects.all()

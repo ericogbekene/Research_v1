@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Department, Project, Writer, HireWriter
+from .models import Department, Project, Writer, HireWriter, JobStatus
 
 
 class DepartmentSerializer(serializers.ModelSerializer):
@@ -33,6 +33,13 @@ class WriterSerializer(serializers.ModelSerializer):
         model = Writer
         fields = ['id', 'name', 'email', 'department', 'status', 'created_at', 'exprerience', 'rating']
 
+
+class JobStatusSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = JobStatus
+        fields = ['id', 'researcher', 'status']
+
+
     def __str__(self):
         """
         Return a string representation of the object.
@@ -41,6 +48,8 @@ class WriterSerializer(serializers.ModelSerializer):
         :rtype: str
         """
         return self.name
+    
+
 class HireWriterSerializer(serializers.ModelSerializer):
     class Meta:
         model = HireWriter
