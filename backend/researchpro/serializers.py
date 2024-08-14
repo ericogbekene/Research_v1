@@ -5,7 +5,7 @@ from .models import Department, Project, Writer, HireWriter
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Department
-        fields = '__all__'
+        fields = ['id', 'name', 'description']
 
     def __str__(self):
         """
@@ -18,7 +18,7 @@ class DepartmentSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = '__all__'
+        fields = ['id', 'title', 'description', 'number_of_pages', 'doctype', 'keywords', 'project_level', 'project_type', 'created_at', 'updated_at', 'abstract', 'department', 'author']
 
     def __str__(self):
         """
@@ -31,7 +31,7 @@ class ProjectSerializer(serializers.ModelSerializer):
 class WriterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Writer
-        fields = '__all__'
+        fields = ['id', 'name', 'email', 'department', 'status', 'created_at', 'exprerience', 'rating']
 
     def __str__(self):
         """
@@ -44,7 +44,7 @@ class WriterSerializer(serializers.ModelSerializer):
 class HireWriterSerializer(serializers.ModelSerializer):
     class Meta:
         model = HireWriter
-        fields = '__all__'
+        fields = ['id', 'project_topic', 'name', 'email', 'phone', 'writer', 'created_at', 'status']
 
     def __str__(self):
         """
