@@ -1,17 +1,19 @@
-import {Navbar} from "@/components/ui/mainnav";
+"use client"
+import { Navbar } from "@/components/ui/mainnav";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Axis3DIcon } from "lucide-react";
 import axios from "axios";
 import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import clientCard from "@/components/ui/clientCard";
 import { useEffect } from "react";
 import { useState } from "react";
 
 const getProjects = async () => {
   const projects_url = 'https://jsonplaceholder.typicode.com/todos/1'
   try {
-    const response = await axios.get(projects_url)
-    return response.data
+    const response = await fetch(projects_url)
+    return response.json()
 
   } catch (error) {
     console.log(error)
@@ -20,25 +22,8 @@ const getProjects = async () => {
 }
 
 export default async function Home() {
-  const [projects, setProjects] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const getResults = async () => {
-
-      try {
-        const data = await getProjects()
-        setProjects(data)
-      } catch (error) {
-        console.error(error)
-      } finally {
-         setIsLoading(false)
-      }
-    };
-
-   getResults();
-  }, [])
   
+
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
