@@ -1,7 +1,7 @@
 databases:
-  - name: setup_file
+  - name: researchpro
     plan: free
-    databaseName: setup_file
+    databaseName: cysoft
     user: cysoft
 
 services:
@@ -13,7 +13,7 @@ services:
     startCommand: "python -m gunicorn setup_file.asgi:application -k uvicorn.workers.UvicornWorker"    envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: setup_filedb
+          name: cysoft
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
