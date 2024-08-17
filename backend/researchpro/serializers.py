@@ -18,7 +18,7 @@ class DepartmentSerializer(serializers.ModelSerializer):
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['id', 'title', 'description', 'number_of_pages', 'doctype', 'keywords', 'project_level', 'project_type', 'created_at', 'updated_at', 'abstract', 'department', 'author']
+        fields = ['id', 'title', 'number_of_pages', 'doctype', 'keywords', 'project_level', 'project_type', 'created_at', 'updated_at', 'abstract', 'department', 'author']
 
     def __str__(self):
         """
@@ -53,7 +53,7 @@ class JobStatusSerializer(serializers.ModelSerializer):
 class HireWriterSerializer(serializers.ModelSerializer):
     class Meta:
         model = HireWriter
-        fields = ['id', 'project_topic', 'name', 'email', 'phone', 'writer', 'created_at', 'status']
+        fields = ['id', 'project_topic', 'name', 'email', 'phone', 'writer', 'created_at',]
 
     def __str__(self):
         """
