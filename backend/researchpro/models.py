@@ -86,6 +86,11 @@ class Writer(models.Model):
     def __str__(self):
         return self.name.username
 
+class JobStatus(models.Model):
+    researcher = models.ForeignKey(Writer, on_delete=models.CASCADE)
+    status = models.CharField(max_length=16, choices=JOB_STATUS_CHOICES)
+    
+    
 class HireWriter(models.Model):
     project_topic = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
@@ -93,7 +98,6 @@ class HireWriter(models.Model):
     phone = models.CharField(max_length=16)
     writer = models.ForeignKey(Writer, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    status = models.CharField(max_length=16, choices=JOB_STATUS_CHOICES)
     
     def __str__(self):
         return self.name
