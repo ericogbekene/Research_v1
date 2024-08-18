@@ -2,6 +2,7 @@ import dj_database_url
 import os
 from dotenv import load_dotenv
 load_dotenv()
+from decouple import config
 from django.core.management import execute_from_command_line
 from pathlib import Path
 
@@ -15,11 +16,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', True)
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=lambda v: [s.strip() for s in v.split(',')])
 
 
 # Application definition
@@ -97,7 +98,7 @@ WSGI_APPLICATION = 'setup_file.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get('DATABASE_URL'), conn_max_age=600),
 }
-
+DATABASES['default'] = dj_database_url.parse(os.environ.get('DATABASE_URL_'), conn_max_age=600)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
