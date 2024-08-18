@@ -1,8 +1,8 @@
 databases:
-  - name: setup_file
+  - name: alx_database
     plan: free
-    databaseName: setup_file
-    user: cysoft
+    databaseName: alx_database
+    user: alx_database_user
 
 services:
   - type: web
@@ -13,7 +13,7 @@ services:
     startCommand: "python -m gunicorn setup_file.asgi:application -k uvicorn.workers.UvicornWorker"    envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: setup_filedb
+          name: alx_database
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
