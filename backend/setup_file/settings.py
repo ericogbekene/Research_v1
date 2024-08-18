@@ -95,7 +95,7 @@ DATABASES = {
 }
 
 
-DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL_'), conn_max_age=600)
+DATABASES['default'] = dj_database_url.parse(config('DATABASE_URL'), conn_max_age=600)
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
