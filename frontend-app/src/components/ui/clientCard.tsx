@@ -1,9 +1,9 @@
 "use client"
 
 import { Button } from "./button"
-import { Card, CardTitle } from "./card"
+import { Card, CardDescription, CardHeader, CardContent, CardFooter, CardTitle } from "./card"
 
-export default function ClientCard({projects}) {
+export default function ClientCard({ projects }) {
     return (
         <div>
             <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -11,14 +11,30 @@ export default function ClientCard({projects}) {
                 {
                     projects?.map((project) => {
                         return (
-                            <Card key={project.id}>
-                                <CardTitle>{project.title}</CardTitle>
+                            <div className="grid grid-cols-4 gap-4">
+                                <Card key={project.id}>
+                                <CardHeader>
+                                    <CardTitle>{project.title}</CardTitle>
+                                    <CardDescription>Lorem Ipsum </CardDescription>
+                                </CardHeader>
+
+                                <CardContent>
+                                    <p>Card Content</p>
+                                </CardContent>
+                                <CardFooter>
+                                    <p>Card Footer</p>
+                                </CardFooter>
+                            
+                                
+
                             </Card>
-                        )
+                            </div>
+                            
+            )
                     })
                 }
-                <Button> Click Me</Button>
-            </main>
-        </div>
+            <Button> Click Me</Button>
+        </main>
+    </div >
     )
 }

@@ -8,6 +8,7 @@ import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 import ClientCard from "@/components/ui/clientCard";
 import { useEffect } from "react";
 import { useState } from "react";
+import Sidebar from "@/components/ui/sidebar";
 
 interface Project {
   userId: number
@@ -54,7 +55,8 @@ export default function Home() {
 
   return (
     <>
-    
+    <Navbar/>
+    <Sidebar/>
     <ClientCard projects={projects} />
     </>
     
