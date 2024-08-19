@@ -2,10 +2,11 @@
 
 import { Button } from "./button"
 import { Card, CardDescription, CardHeader, CardContent, CardFooter, CardTitle } from "./card"
+import Link from "next/link"
 
 export default function ClientCard({ projects }) {
     return (
-        <div>
+        <div className="client-card">
             <main className="flex min-h-screen flex-col items-center justify-between p-24">
                 <h1> Browse Our Collection of Expertly written Academic Papers </h1>
                 <div className="">
@@ -36,7 +37,10 @@ export default function ClientCard({ projects }) {
                     }
                 </div>
 
-                <Button href=""> Hire a Writer</Button>
+                <Button asChild> 
+                <Link href="/hire-writer"> Hire a Writer </Link>
+                    
+                </Button>
             </main>
         </div >
     )
