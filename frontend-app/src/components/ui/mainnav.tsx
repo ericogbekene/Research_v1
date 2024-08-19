@@ -26,11 +26,18 @@ export default function Navbar() {
             Home
           </Link>
           <Link href="/about" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
+            Departments
+          </Link>
+          <Link href="/about" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             About
+          </Link>
+          <Link href="/hire-writer" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
+            Hire-Writer
           </Link>
           <Link href="/contact" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             Contact
           </Link>
+          
         </div>
       </div>
     </nav>

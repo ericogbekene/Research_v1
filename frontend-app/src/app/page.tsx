@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Sidebar from "@/components/ui/sidebar";
 import Footer from "@/components/ui/footer";
+import TwoColumnsWithIllustration from "@/components/ui/hero";
 
 interface Todos {
   userId: number
