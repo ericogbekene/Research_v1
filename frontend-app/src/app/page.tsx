@@ -10,12 +10,29 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Sidebar from "@/components/ui/sidebar";
 
-interface Project {
+interface Todos {
   userId: number
   id: number
   title: string
   completed: boolean
 }
+
+interface Project {
+  id: number;
+  title: string;
+  number_of_pages: number;
+  doctype: string;
+  keywords: string;
+  project_level: string;
+  project_type: string;
+  created_at: string;
+  updated_at: string;
+  abstract: string;
+  department: number;
+  author: number;
+}
+
+
 
 /**
   const getProjects = async () => {
@@ -34,7 +51,8 @@ interface Project {
 export default function Home() {
   const [projects, setProjects] = useState<Project[]>([])
   /*const [loading, setIsLoading] = useState<boolean>(true)*/
-  const projectsUrl = 'https://jsonplaceholder.typicode.com/todos/'
+  const todoUrl = 'https://jsonplaceholder.typicode.com/todos/'
+  const projectsUrl = 'https://researchpro.onrender.com/projects/'
 
   useEffect(() => {
     const getResults = async () => {
