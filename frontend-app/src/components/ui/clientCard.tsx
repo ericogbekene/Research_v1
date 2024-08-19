@@ -17,17 +17,24 @@ export default function ClientCard({ projects }) {
                                     <Card key={project.id}>
                                         <CardHeader>
                                             <CardTitle>{project.title}</CardTitle>
-                                            <CardDescription>Lorem Ipsum </CardDescription>
+                                            
                                         </CardHeader>
 
                                         <CardContent>
+                                            <div className="flex items-center justify-start gap-2">
                                             <Button asChild>
                                                 <Link href="/hire-writer"> View More </Link>
 
                                             </Button>
+                                            <Button asChild>
+                                                <Link href="/hire-writer"> Hire Writer </Link>
+
+                                            </Button>
+                                            </div>
+                                            
                                         </CardContent>
                                         <CardFooter>
-                                            <p>Card Footer</p>
+                                            <p></p>
                                         </CardFooter>
 
 
@@ -40,10 +47,7 @@ export default function ClientCard({ projects }) {
                     }
                 </div>
 
-                <Button asChild>
-                    <Link href="/hire-writer"> Hire a Writer </Link>
 
-                </Button>
             </main>
         </div >
     )
