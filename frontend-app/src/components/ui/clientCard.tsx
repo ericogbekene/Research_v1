@@ -13,7 +13,7 @@ export default function ClientCard({ projects }) {
                     {
                         projects?.map((project) => {
                             return (
-                                <div className="grid grid-cols-4 gap-8">
+                                <div className="">
                                     <Card key={project.id}>
                                         <CardHeader>
                                             <CardTitle>{project.title}</CardTitle>
@@ -21,7 +21,10 @@ export default function ClientCard({ projects }) {
                                         </CardHeader>
 
                                         <CardContent>
-                                            <p>Card Content</p>
+                                            <Button asChild>
+                                                <Link href="/hire-writer"> View More </Link>
+
+                                            </Button>
                                         </CardContent>
                                         <CardFooter>
                                             <p>Card Footer</p>
@@ -37,9 +40,9 @@ export default function ClientCard({ projects }) {
                     }
                 </div>
 
-                <Button asChild> 
-                <Link href="/hire-writer"> Hire a Writer </Link>
-                    
+                <Button asChild>
+                    <Link href="/hire-writer"> Hire a Writer </Link>
+
                 </Button>
             </main>
         </div >

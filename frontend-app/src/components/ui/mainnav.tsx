@@ -29,7 +29,10 @@ export default function Navbar() {
             Departments
           </Link>
           <Link href="/about" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
-            About
+            Projects
+          </Link>
+          <Link href="/hire-writer" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
+            Hire-Writer
           </Link>
           <Link href="/hire-writer" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             Hire-Writer

@@ -2,7 +2,7 @@ const Sidebar = () => {
     return ( <>
         {/** Insert search bar */}
         <div> SideBar</div>
-        <div> profile</div>
+        <div> Departments</div>
         <div> Settings</div>
     </> );
 }

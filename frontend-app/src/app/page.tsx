@@ -77,8 +77,12 @@ export default function Home() {
     <>
     <Navbar/>
     <Sidebar/>
+    <div className="flex justify-between items-center"> 
+    
     <ClientCard projects={projects} />
+    </div>
     <Footer/>
+    
     </>
     
   )
