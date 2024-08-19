@@ -11,6 +11,7 @@ import { useState } from "react";
 import Sidebar from "@/components/ui/sidebar";
 import Footer from "@/components/ui/footer";
 import TwoColumnsWithIllustration from "@/components/ui/hero";
+import Hero from "@/components/ui/heroe";
 
 interface Todos {
   userId: number
@@ -77,6 +78,7 @@ export default function Home() {
     <>
     <Navbar/>
     <Sidebar/>
+    <Hero/>
     <div className="flex justify-between items-center"> 
     
     <ClientCard projects={projects} />
