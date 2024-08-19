@@ -9,6 +9,7 @@ import ClientCard from "@/components/ui/clientCard";
 import { useEffect } from "react";
 import { useState } from "react";
 import Sidebar from "@/components/ui/sidebar";
+import Footer from "@/components/ui/footer";
 
 interface Todos {
   userId: number
@@ -76,6 +77,7 @@ export default function Home() {
     <Navbar/>
     <Sidebar/>
     <ClientCard projects={projects} />
+    <Footer/>
     </>
     
   )

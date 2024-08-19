@@ -36,7 +36,7 @@ export default function ClientCard({ projects }) {
                     }
                 </div>
 
-                <Button> Click Me</Button>
+                <Button href=""> Hire a Writer</Button>
             </main>
         </div >
     )
