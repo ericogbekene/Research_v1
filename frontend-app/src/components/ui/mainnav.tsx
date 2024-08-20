@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold">Logo</div>
+        <div className="text-white font-bold">ResearchPro</div>
         
         {/* Hamburger menu for mobile */}
         <div className="md:hidden">
@@ -25,17 +25,17 @@ export default function Navbar() {
           <Link href="/" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             Home
           </Link>
-          <Link href="/about" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
+          <Link href="/departments" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             Departments
           </Link>
-          <Link href="/about" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
+          <Link href="/projects" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             Projects
           </Link>
           <Link href="/hire-writer" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             Hire-Writer
           </Link>
-          <Link href="/hire-writer" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
-            Hire-Writer
+          <Link href="/about" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
+            About
           </Link>
           <Link href="/contact" className="block md:inline-block text-white hover:text-gray-300 mt-4 md:mt-0 md:ml-6">
             Contact

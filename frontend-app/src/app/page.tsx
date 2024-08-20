@@ -76,23 +76,25 @@ export default function Home() {
 
   return (
     <>
-    <Navbar/>
-    <div className="flex">
-      <Sidebar/>
-      <div>
-        <Hero/>
-        <ClientCard projects={projects} />
-      </div>
-    </div>    
+      <Navbar />
+      <Hero />
+      <div className="flex">
 
-    {/* <div className="flex items-center justify-between">
+        
+        <div className="flex items-center justify-between">
+          <Sidebar />
+          <ClientCard projects={projects} />
+        </div>
+      </div>
+
+      {/* <div className="flex items-center justify-between">
     
     </div> */}
-  
 
-    <Footer/>
-    
+
+      <Footer />
+
     </>
-    
+
   )
 }
