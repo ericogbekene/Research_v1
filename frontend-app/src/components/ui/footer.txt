@@ -1,0 +1,12 @@
+const Footer = () => {
+    return ( 
+        <>
+        
+        <div className="flex items-center justify-between">
+            <span>c ResearchPro 2024</span>
+        </div>
+        </>
+     );
+}
+ 
+export default Footer;

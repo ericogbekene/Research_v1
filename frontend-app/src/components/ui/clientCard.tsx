@@ -7,8 +7,8 @@ import Link from "next/link"
 export default function ClientCard({ projects }) {
     return (
         <div className="client-card">
-            <main className="flex min-h-screen flex-col items-center justify-between p-24">
-                <h1> Browse Our Collection of Expertly written Academic Papers </h1>
+            <main className="flex min-h-screen bg-slate-300 flex-col items-center justify-between p-24">
+                <h1 className="text-2xl mb-4"> Browse Our Collection of Expertly written Academic Papers </h1>
                 <div className="">
                     {
                         projects?.map((project) => {
