@@ -2,7 +2,7 @@ const Sidebar = () => {
     return (
       <>
         {/** Insert search bar */}
-        <div className="w-64 h-screen bg-gray-800 text-white p-4">
+        <div className="w-70 h-100 bg-gray-800 text-white p-4">
           <div className="mb-4">
             <input
               type="text"
