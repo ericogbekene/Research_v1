@@ -11,10 +11,10 @@ export default function ClientCard({ projects }) {
                 <h1 className="text-2xl mb-4"> Browse Our Collection of Expertly written Academic Papers </h1>
                 <div className="">
                     {
-                        projects?.map((project) => {
+                        projects?.map((project, index) => {
                             return (
                                 <div className="">
-                                    <Card key={project.id}>
+                                    <Card key={index}>
                                         <CardHeader>
                                             <CardTitle>{project.title}</CardTitle>
                                             
