@@ -7,31 +7,19 @@ class DepartmentSerializer(serializers.ModelSerializer):
         model = Department
         fields = ['id', 'name', 'description']
 
-    def __str__(self):
-        """
-        Return a string representation of the object.
 
-        :return: A string representing the name of the object.
-        :rtype: str
-        """
-        return self.name
 class ProjectSerializer(serializers.ModelSerializer):
+    author = serializers.StringRelatedField()
+
     class Meta:
         model = Project
         fields = ['id', 'title', 'number_of_pages', 'doctype', 'keywords', 'project_level', 'project_type', 'created_at', 'updated_at', 'abstract', 'department', 'author']
 
-    def __str__(self):
-        """
-        Return a string representation of the object.
 
-        :return: A string representing the name of the object.
-        :rtype: str
-        """
-        return self.title
 class WriterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Writer
-        fields = ['id', 'name', 'email', 'department', 'status', 'created_at', 'exprerience', 'rating']
+        fields = ['id', 'name', 'email', 'department', 'status', 'created_at', 'experience', 'rating']
 
 
 class JobStatusSerializer(serializers.ModelSerializer):
@@ -40,26 +28,9 @@ class JobStatusSerializer(serializers.ModelSerializer):
         fields = ['id', 'researcher', 'status']
 
 
-    def __str__(self):
-        """
-        Return a string representation of the object.
-
-        :return: A string representing the name of the object.
-        :rtype: str
-        """
-        return self.name
-    
-
 class HireWriterSerializer(serializers.ModelSerializer):
+    writer = serializers.StringRelatedField()
+
     class Meta:
         model = HireWriter
-        fields = ['id', 'project_topic', 'name', 'email', 'phone', 'writer', 'created_at',]
-
-    def __str__(self):
-        """
-        Return a string representation of the object.
-
-        :return: A string representing the name of the object.
-        :rtype: str
-        """
-        return self.name
+        fields = ['id', 'project_topic', 'name', 'email', 'phone', 'writer', 'created_at']
