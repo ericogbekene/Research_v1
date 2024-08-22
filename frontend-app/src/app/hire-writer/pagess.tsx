@@ -1,5 +1,5 @@
 import Navbar from "@/components/ui/mainnav";
-import { ProfileForm } from "@/components/ui/profileForm";
+
 
 const HireWriter = () => {
     return ( 

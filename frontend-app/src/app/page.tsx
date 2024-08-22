@@ -18,9 +18,12 @@ interface Todos {
   id: number
   title: string
   completed: boolean
+
 }
 
-interface Project {
+
+
+export type Project = {
   id: number;
   title: string;
   number_of_pages: number;
@@ -33,6 +36,10 @@ interface Project {
   abstract: string;
   department: number;
   author: number;
+}
+
+export type ClientCardProps = {
+  projects: Project[];
 }
 
 
