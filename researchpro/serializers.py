@@ -33,4 +33,4 @@ class HireWriterSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = HireWriter
-        fields = ['id', 'project_topic', 'name', 'email', 'phone', 'writer', 'created_at']
+        fields = ['id', 'project_topic', 'client_name', 'email', 'phone', 'writer', 'created_at']
